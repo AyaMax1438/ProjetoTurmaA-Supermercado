@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/styleFormCheckout.css" />
+    <title>Checkout</title>
+</head>
+<body>
+    {% if avisos %}
+    <h1>{{ aviso }}</h1>
+    {% endif %}
+
+    <div class="pagamento">
+        <div class="fundo"></div>
+        <div class="cartao">
+            <img src="" class="chip">
+            <div class="logo"></div>
+            <div class="conteudo">
+                <h2 class="nomeBanco" contenteditable="true">Nome do banco</h2>
+                <form action="">
+                    <div class="campo-input">
+                        <span>Endereço</span>
+                        <input type="text" placeholder="Rua Amor, bairro Jardim">
+                        <span>Complemento</span>
+                        <input type="text" placeholder="">
+                        <span>Número</span>
+                        <input type="text" placeholder="Numero 12">
+                    </div>
+                    <div class="campo-input">
+                        <span>Número da Conta</span>
+                        <input type="text" placeholder="0123 4567 8910 1112" maxlength="19">
+                    </div>
+                    <div class="campo-input">
+                        <span>Titular</span>
+                        <input type="text" placeholder="Nome Sobrenome">
+                    </div>
+                    <div class="grupo">
+                        <div class="campo-input">
+                            <span>Validade</span>
+                            <input type="text" placeholder="MM/AA" maxlength="5">
+                        </div>
+                        <div class="campo-input">
+                            <span>CCV</span>
+                            <input type="password" placeholder="***" maxlength="3">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <button class="botao">Finalizar pagamento</button>
+    </div>
+
+    </form>
+        <a href="?MUDARPAGINA=-1">Página anterior</a>
+        <a href="?MUDARPAGINA=1">Página seguinte</a>
+    </form>
+</body>
+</html>

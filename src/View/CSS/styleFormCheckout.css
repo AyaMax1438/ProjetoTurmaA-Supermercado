@@ -1,0 +1,10 @@
+.pagamento .cartao{
+    background-color: #fcfcfc;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 6px 6px 12px rgb(0, 0, .05);
+    overflow: hidden;
+    transform: translate(70px);
+    transition: .5s;
+    z-index: 1;
+}
