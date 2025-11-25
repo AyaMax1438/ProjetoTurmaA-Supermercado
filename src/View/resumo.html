@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmação do pedido</title>
+</head>
+<body>
+    <div>
+        <h3 style="margin:0 0 8px;">Resumo do pedido</h3>
+        <p style="margin:0;color:var(--muted);font-size:0.95rem;">Você comptrou este produto</p>
+    </div>
+
+    {% for produto in unico %}
+    <div class="items" role="list" aria-live="polite">
+        <div class="item" role="listitem">
+            <div class="item-info">
+                <div style="font-weight:600;">{{ produto.imagem }}</div>
+                <div style="font-weight:600;">{{ produto.nome }}</div>
+                <div style="color:var(--muted);font-size:0.9rem;">{{ produto.desc }}</div>
+            </div>
+            <div style="text-align:right;">
+                <div class="item-qty">{{ Carrinho.itens }}</div>
+                <div style="font-weight:600;margin-top:6px;">R$ {{ produto.valor }}</div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div style="display:flex; justify-content:center; margin-top:6px;">
+        <button type="button" class="primary" onclick="document.querySelector('.checkout-form').requestSubmit()">Valor pago: R$ {{ total.checkout }}</button>
+    </div>
+</body>
+</html>
